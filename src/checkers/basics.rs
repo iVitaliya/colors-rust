@@ -3,5 +3,5 @@ pub fn ReplaceClose(index: i32, string: &str, close: &str, replace: &str, head: 
         return head + tail;
     }
 
-    return head + ReplaceClose()
+    return head + ReplaceClose(next, tail, close, replace, head+replace, tail, string.find(close).unwrap() as i32)
 }
