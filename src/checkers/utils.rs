@@ -5,6 +5,9 @@ struct IOS {
     supported: bool
 }
 
+/// Utils : String Array Includes
+/// ------------------------------
+/// Checks if specified string value exists in said string array.
 pub fn string_element_exists(element: &str, array: [&str; 15]) -> bool {
     for i in array {
         if i == element {
@@ -15,6 +18,9 @@ pub fn string_element_exists(element: &str, array: [&str; 15]) -> bool {
     return false;
 }
 
+/// Utils : Check OS
+/// ----------------
+/// Checks which operating system is used for this program.
 pub fn detect_os() -> IOS {
     let os = env::consts::OS;
     let os_name: &str;
@@ -68,6 +74,9 @@ pub fn detect_os() -> IOS {
     };
 }
 
+/// Utils : Integer To String
+/// -------------------------
+/// Converts the specified integer to a string.
 pub fn int_to_string(integer: i32) -> String {
     return integer.to_string();
 }
