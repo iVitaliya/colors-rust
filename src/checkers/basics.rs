@@ -1,9 +1,12 @@
+use substring::Substring;
 use crate::checkers::utils;
 
 /// Basics : Replace Close
 /// ----------------------
 /// This function open & closes the text with coloring. 
 pub fn replace_close(index: i32, string: &str, close: &str, replace: &str, head: &str, tail: &str, next: i32) -> String {
+    
+    
     if next < 0 {
         return head.to_string() + &tail.to_string();
     }
